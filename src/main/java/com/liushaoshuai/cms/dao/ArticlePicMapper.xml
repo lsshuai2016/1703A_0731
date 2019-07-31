@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liushaoshuai.cms.dao.ArticlePicMapper">
+	
+	
+	<insert id="insert">
+		insert into cms_article_pic(content,title,createtime) values (#{content},#{title},now())
+	</insert>
+	
+	<select id="select" resultType="map">
+		select * from cms_article_pic where id=#{value}
+	</select>
+	
+	<select id="selects" resultType="map">
+		select * from cms_article_pic order by createtime desc
+	</select>
+	
+	
+	
+	
+	
+</mapper>
